@@ -3,4 +3,6 @@ from .models import Vendor, Asset
 
 admin.site.register(Vendor)
 
-admin.site.register(Asset)
+@admin.register(Asset)
+class AssetAdmin(admin.ModelAdmin):
+    list_display = ('vendor', 'model', 'borrowed_date', 'returned_date')
