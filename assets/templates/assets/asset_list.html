@@ -1,0 +1,11 @@
+<ol>
+    <li>Hello</li>
+    <li>World</li>
+    <li>!</li>
+</ol>
+
+<ol>
+    {% for asset in assets  %}
+        <li> {{ asset.borrowed_date }} </li>
+    {% endfor %}
+</ol>

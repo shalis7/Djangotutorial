@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from .models import Asset
 
-# Create your views here.
+def asset_list(request):
+    context = {
+        "assets" : Asset.objects.all()
+    }
+    return render(request, 'assets/asset_list.html', context)
